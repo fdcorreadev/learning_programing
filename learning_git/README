@@ -1,0 +1,76 @@
+* git init
+
+Estas en la carpeta en la estan los archivos de tu proyecto.
+abres la terminal y ejecutas git init para indicar que esta es la carpeta central de mis archivos.
+cuando ejecutemos el comando, ademas, creamos:
+ a. Staging, es el area en la memoria RAM que es donde al principio iremos agregando los cambios
+ b. repository (repositorio/master) es el directorio que conocemos como /.git/ que es el lugar donde al final del proyecto quedaran
+ todos los cambios
+
+* git config-global user.name "mi user o nombre"
+configuramos el git a nuestro nombre
+
+* git config-global user.email "tu@correo.com"
+configuramos git con nuestro correo.
+
+* git config --list
+-Nos muestra la configuración por defecto de nuestro git.
+
+* git add archivo.extencion
+Agregamos el archivo al staging, en este punto el archivo espera a que lo agreguemos al repositorio.
+NOTA: antes de usar este comando, el archivo lo llamamos como un archivo "untracked", luego de usar el comando el archivo lo podemos llamr un archivo tracked, cuando esta ya en el staging
+    *git add .
+    Agregamos TODOS los archivos dentro de nuestra carpeta al staging.
+
+* git rm -cached archivo.extension
+Eliminamos el archivo del staging area y lo volvemos Untracked.
+
+*git commit -m "mensaje"
+Luego de escribir un mensaje descriptivo, mandamos el archivo al repósitorio/master.
+NOTA: cada commit es una nueva version con cambios de tu archivo.
+
+*git status
+Nos muestra cual es el status de nuestro proyecto
+
+* git log
+muestra el historial de commits hechos desde el mas reciente hsta el mas viejo.
+
+* git log --stat
+Nos muestra el hislos cambios especificos de cada commit desde el mas reciente hasta el mas viejo
+
+*git show archivo.extension
+Muestra los cambios hechos al archivo en el ultimo commit
+
+*git diff
+Nos muestra las diferencias entre los cambios que estan en el staging y los que aun no se han añadido
+
+* git diff #commit-n *commit-n
+Nos muestra las diferencias entre las 2 versiones de los commits.
+
+*git reset #commit --soft
+-volvemos nuestro repositorio a la version del commit que se le indique, pero sin borrar los commits usados anteriormente
+
+*git reset #commit --hard
+volvemos a nuestro archivo a la version del commit indicada, BORRANDO TODOS los commits usados anteriores a la version del commit indicada
+
+*git checkout #commit archivo.ext
+volvemos a nuestro archivo a la version del commit indicada, sin cambiar nada en el staging
+  *git checkout master  archivo.ext
+  volvemos nuestro archivo a la version que teniamos antes de hacer el primer checkout, sin cambiar nada en el staging
+
+#-----------------------------------------------------------------NOTA RESET-----------------------------------------------------------#
+
+*git reset --soft: 
+Borra el historial y los registros de Git de commits anteriores, pero guarda los cambios en Staging para aplicar las últimas actualizaciones a un nuevo commit.
+
+*git reset --hard: 
+Deshace todo, absolutamente todo. Toda la información de los commits y del área de staging se elimina del historial.
+
+*git reset --mixed: 
+Borra todo, exactamente todo. Toda la información de los commits y del área de staging se elimina del historial.
+
+*git reset HEAD: 
+El comando git reset saca archivos del área de staging sin borrarlos ni realizar otras acciones. Esto impide que los últimos cambios en estos archivos se envíen al último commit. Podemos incluirlos de nuevo en staging con git add si cambiamos de opinión.
+
+![imagen][def]
+[def]: https://static.platzi.com/media/user_upload/arboles-git-3092a895-4d68-4d40-b397-033e2d5f0767.jpg
