@@ -86,3 +86,21 @@ Es importante tener en cuenta el efecto que cada comando tiene en el proyecto y 
 
 *git pull origin master --allow-unrelated-histories
 Comando con el que realizamos el pull cuando se quiere traer un repositorio de la nube y combinarlo con el local despues de git remote
+
+*git log --all
+muestra toda los commits que hemos hecho como un historial
+
+*git log --all -- graph
+sirve para mostrar el comportamiento de las ramas en el proyecto
+
+*git log --all --graph --decorate --oneline
+sirve para mostrar el comportamiento de las ramas en el proyecto de una manera comprimida
+
+*git tag -a v0.1 -m "texto" hashdelcommit
+para crear la versiones de codigo como V1,v2,v3 etc.
+
+*git show-ref -tags
+sirve para ver a que hash pertenece el tags
+
+*git push origin --tags
+para empujar el tags
