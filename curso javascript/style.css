@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+#texts {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-bottom: 2em;
+}
+
+#texts #autor {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#texts input {
+    width: 30rem;
+    height: 3rem;
+    border-color: black;
+    border-radius: 30px;
+    background-color: rgb(192, 192, 192);
+}
+
+
