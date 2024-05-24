@@ -104,3 +104,20 @@ sirve para ver a que hash pertenece el tags
 
 *git push origin --tags
 para empujar el tags
+
+
+*git tag
+ver tags creados
+
+*git tag -d nombre_tag
+eliminar tags en local
+
+*git push origin :refs/tags/nombre_tag
+Elimina el tag en el repositorio online
+
+
+*git show-branch --all
+muestra todas las ramas
+
+*gitk
+ver visual ramas
