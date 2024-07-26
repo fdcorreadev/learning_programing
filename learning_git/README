@@ -121,3 +121,85 @@ muestra todas las ramas
 
 *gitk
 ver visual ramas
+
+
+*git remote add upstream url
+no crea otra fuente nueva donde podemos traer datos a nuestra rama main
+
+*git rebase branch 
+sirve para pegar la rama tal cual no deja rastro que existio la otra rama
+
+* git stash
+guarda en un lugar temporal
+
+* git stash list 
+ver los stash guardados
+
+* git stash pop 
+volver a bajar los cambios a el editor de codigo
+
+* git stash branch nombre_rama
+crea una rama con el codigo que fue guardado en el stash
+
+* git stash drop
+borrar cambios en el stash
+
+* git clean --dry-run
+borrar archivos copia en seco
+
+* git clean -f
+borrar no deseados, no sirve para carpeta
+
+* git cherry-pick
+sirve para traer solo un comit determinado
+
+* git reflog
+recuperar todo
+
+* git reset --SOFT hashCommit
+es para recuperar, lo que tienes en el statement lo mantiene, lo que todavia esta pendiente de un commit
+
+* git reset --HARD hashCommit
+te resetea todo
+
+* git reset --amend
+pega los cambios al commit anterior cuando se te olvida algo y no haz enviado aun el push 
+
+* git grep paralbra clave 
+para ver cuanto se repite una palabra o una funcion etc.
+
+* git grep -n paralbra clave
+esto sirve para ver en que linea se encuenta
+
+* git grep -c paralbra clave
+cuenta cunto se repite la palabra clave
+
+* git log -S paralbra clave
+para buscar la palabra clave dentro de los cimmit
+
+* git shortlog -sn  
+muestra cuantos commit han hecho cada miembros del equipo.
+
+* git shortlog -sn --all 
+ muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado
+
+* git shortlog -sn --all --no-merge 
+ muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges
+
+* git blame ARCHIVO 
+ muestra quien hizo cada cosa linea por linea
+
+* git blame archivo L35-53
+que me muetre quien hizo los cambios en esas rama
+
+* git COMANDO --help 
+ muestra como funciona el comando.
+
+* git blame ARCHIVO -Llinea_inicial,linea_final
+ muestra quien hizo cada cosa linea por linea indicándole desde que linea ver ejemplo -L35,50
+
+* **git branch -r **
+ se muestran todas las ramas remotas
+
+* git branch -a 
+ se muestran todas las ramas tanto locales como remotas
